@@ -24,7 +24,7 @@ const Register = () => {
         return;
     }
     try {
-        const response = await axios.post('http://localhost:6005/api/auth/register', form);
+        const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/register`, form);
         localStorage.setItem('token', response.data.token);
     localStorage.setItem('user', JSON.stringify(response.data.user));
         alert('Registration successful. Please login.');

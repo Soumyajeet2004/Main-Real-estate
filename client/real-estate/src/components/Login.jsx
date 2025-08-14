@@ -19,7 +19,7 @@ const Login = () => {
     const handlesubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:6005/api/auth/login', form);
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, form);
             localStorage.setItem('token',response.data.token);
             localStorage.setItem('user', JSON.stringify(response.data.user));
             navigate('/dashboard');
