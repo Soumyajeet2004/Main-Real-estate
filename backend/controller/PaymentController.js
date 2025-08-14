@@ -1,6 +1,6 @@
 const Razorpay = require('razorpay');
 require('dotenv').config();
-const Payment = require('../models/payment');
+const Payment = require('../models/Payment');
 
 const razorpay = new Razorpay({
     key_id: process.env.RAZORPAY_KEY_ID,
