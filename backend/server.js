@@ -20,6 +20,7 @@ const corsOptions = {
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
+            console.log(`CORS blocked for origin: ${origin}`);
             callback(new Error("Not allowed by CORS"));
         }
     },
@@ -28,7 +29,7 @@ const corsOptions = {
     credentials: true
 };
 
-app.use(cors(corsOptions));
+app.use(cors({ origin: true, credentials: true }));
 app.options(/.*/, cors(corsOptions)); // Safe now
 
 app.use(express.json());
