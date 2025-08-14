@@ -12,6 +12,12 @@ connectDB();
 
 
 app.use(cors());
+const cors = require("cors");
+app.use(cors({
+    origin: "https://main-real-estate-frontend.vercel.app",
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true
+}));
 app.use(express.json());
 app.use('/api/properties', propertyRoutes);
 app.use('/api/auth', authRoutes);
