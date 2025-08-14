@@ -1,0 +1,227 @@
+
+.hero {
+  background-image: url('https://cdn.confident-group.com/wp-content/uploads/2024/12/27103036/types-of-real-estate-overview-scaled.jpg');
+  background-size: cover;        /* Ensures the image covers the section */
+  background-position: center;   /* Keeps image centered */
+  background-repeat: no-repeat;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(214, 93%, 89%);
+  margin-bottom: 1rem;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+.btn-group {
+  margin-top: 1rem;
+}
+
+.btn-group button {
+  padding: 0.6rem 1.5rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #d1d5db;
+  color: #1f2937;
+}
+
+.btn-group button.active {
+  background-color: #00a043;
+  color: white;
+}
+.btn-group button.sell{
+    background-color: #f14c00;
+    color: white;
+}
+.btn-group button:hover {
+  background-color: #012b7a;
+  color: white;
+}
+.search-bar {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-bar select,
+.search-bar button {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.search-bar button {
+  background-color: #1e40af;
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #1d4ed8;
+}
+
+.post-property {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+select.s{
+    background-color: #1e3a8a;
+}
+.post-property a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.buycard {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+/*city section */
+
+.cities {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #5792ce, #000000);
+}
+.cities h2{
+  color: #02ffd5;
+  font-weight: 1000;
+}
+.city-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.city-box {
+  background-color: #000000;
+  padding: 1rem;
+  border-color: #000000;
+  border : 2px solid #000000;
+  color: #ffe600;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  width: 140px;
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.city-box:hover {
+  transform: translateY(-5px);
+}
+
+.view-more {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Property Listing */
+.latest-properties {
+  color: #dcf4ff;
+  padding: 3rem 2rem;
+  background-color: #ececec;
+  text-align: center;
+  background-image: url('https://images.timesproperty.com/properties/photos/9475/mini/Samridhi_Daksh_Avenue_8.jpg');
+  background-size: cover;        /* Ensures the image covers the section */
+  background-position: center;   /* Keeps image centered */
+  background-repeat: no-repeat;
+}
+
+.property-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.property-card {
+  background: #f1f5f9;
+  width: 240px;
+  padding: 1rem;
+  color: #1f2937;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+}
+
+.img-box {
+  background: #cbd5e1;
+  height: 120px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.property-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.property-card a {
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Services */
+.services {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #abd8ec;
+}
+
+.services img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.service-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(145, 230, 236, 0.8)), to(rgba(85, 117, 255, 0.8)));
+  padding: 1rem;
+  width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,1);
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}

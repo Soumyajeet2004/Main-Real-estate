@@ -1,0 +1,26 @@
+/* Styling for the entire caption container */
+.caption-container {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+/* Styling for the semi-transparent background band */
+.caption-background {
+  background-color: rgba(160, 159, 159, 0.788);
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* Styling for the title text */
+.caption-title {
+  text-align: center;
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}

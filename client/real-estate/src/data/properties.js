@@ -1,0 +1,53 @@
+const listings = [
+  {
+    id: 1,
+    title: "2 BHK Flat for Sale in Kolkata",
+    area: "800 sqft",
+    price: 6000000,
+    pricePerSqft: 6466,
+    floor: "5 out of 5",
+    status: "Ready to Move",
+    owner: "Soumyajeet Saha",
+    imageCount: 19,
+    imageUrl: "https://s7ap1.scene7.com/is/image/incredibleindia/howrah-bridge-howrah-west-bengal-city-1-hero?qlt=82&ts=1742154305591",
+  },
+  {
+    id: 2,
+    title: "2 BHK Flat for Sale in Loudon Street, Kolkata",
+    area: "1560 sqft",
+    price: 4000000,
+    pricePerSqft: 2564,
+    bathroom: 2,
+    furnishing: "Semi-Furnished",
+    owner: "Anupam Jana",
+    imageCount: 17,
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTQjr5JkOfSE6vmq2NuBbSIAPz5VOPKOKvPQ&s",
+  },
+  {
+    id: 3,
+    title: "2 BHK Flat for Sale in Loudon Street, Kolkata",
+    area: "1560 sqft",
+    price: 4000000,
+    pricePerSqft: 2564,
+    bathroom: 2,
+    furnishing: "Semi-Furnished",
+    owner: "Arpon Sana",
+    imageCount: 17,
+    imageUrl: "https://st2.indiarailinfo.com/kjfdsuiemjvcya4/0/0/2/7/4226027/0/201902101933193810988.jpg",
+  },
+  {
+  id: 4,
+    title: "2 BHK Flat for Sale in Loudon Street, Kolkata",
+    area: "1560 sqft",
+    price: 4000000,
+    pricePerSqft: 2564,
+    bathroom: 2,
+    furnishing: "Semi-Furnished",
+    owner: "Aritra Haldar",
+    imageCount: 17,
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTQjr5JkOfSE6vmq2NuBbSIAPz5VOPKOKvPQ&s",
+  },
+  
+];
+
+export default listings;

@@ -1,0 +1,101 @@
+.page-title {
+text-align: center;
+  font-size: 2.2rem;           /* Large and clear */
+  font-weight: 700;            /* Bold for importance */
+  color: #ffffff;              /* Professional dark gray */
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;       /* Slight spacing for modern look */
+  position: relative;
+  padding-bottom: 10px;  
+}
+.page-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;                 /* Length of accent bar */
+  height: 4px;
+  background: linear-gradient(90deg, #074eb3, #0074e4);
+  border-radius: 2px;
+}
+.agents-container {
+  padding: 20px;
+}
+
+.agents-list {
+  list-style: none;
+  padding: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.agent-card {
+  background: #ffffff;
+  border-radius: 999px; /* Makes ends round */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.agent-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.agent-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: 3px solid #7e7e7e;
+}
+
+.agent-details {
+  flex: 1;
+}
+
+.agent-details p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.agent-details strong {
+  color: #222;
+
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 10px 18px;
+  background-color: #074eb3;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 51px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #358705;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}

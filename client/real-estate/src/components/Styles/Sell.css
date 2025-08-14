@@ -1,0 +1,98 @@
+/* Container */
+.form-container {
+  width: 80%;
+  align-items: center;
+  margin: 50px auto;
+  margin-right: 100px;
+  padding: 40px;
+  background-color: #fcfcfc;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    background-size: cover;        /* Ensures the image covers the section */
+  background-position: center;   /* Keeps image centered */
+  background-repeat: no-repeat;
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000000;
+  font-size: 2.5rem;
+  font-weight: 1000;
+}
+
+/* Form Layout */
+.property-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Full-width override for textarea and long fields */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Input Styles */
+.property-form input,
+.property-form textarea {
+  width: 100%;
+  color: #000000;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccd1d9;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.property-form input:focus,
+.property-form textarea:focus {
+  border-color: #007bff;
+  background-color: #fff;
+  outline: none;
+}
+
+/* Label Styles */
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Submit Button */
+.submit-button {
+  grid-column: 1 / -1;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #00bd00;
+}
+
+/* Link Styling */
+.view-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.view-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.view-link a:hover {
+  color: rgb(255, 0, 0);
+}

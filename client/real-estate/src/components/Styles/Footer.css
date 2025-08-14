@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* Make page take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Main container flexes to push footer down */
+#root, .app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* Content grows and pushes footer */
+
+
+/* Footer styling */
+footer {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-icon {
+  color: #f5f5f5;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-icon:hover {
+  color: #0a66c2; /* LinkedIn blue effect */
+  transform: scale(1.2);
+}
+.footer p{
+    color: antiquewhite;
+}

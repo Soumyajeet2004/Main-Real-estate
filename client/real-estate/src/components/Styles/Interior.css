@@ -1,0 +1,31 @@
+
+.carousel-caption h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.carousel-caption p {
+  font-size: 1.1rem;
+}
+
+.services {
+  background: linear-gradient(135deg, #5792ce, #000000);
+  color: #ffd900;
+}
+
+.site-footer {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+blockquote {
+  font-style: italic;
+  color: #ffffff;
+  border-left: 5px solid #1abc9c;
+  padding-left: 15px;
+}
