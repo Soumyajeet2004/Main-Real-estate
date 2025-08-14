@@ -5,7 +5,6 @@ const connectDB = require('./config/db');
 const propertyRoutes = require('./routes/propertyRoutes');
 const authRoutes = require('./routes/authRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
-app.use
 const app = express();
 dotenv.config();
 connectDB();
