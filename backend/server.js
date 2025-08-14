@@ -9,14 +9,29 @@ const app = express();
 dotenv.config();
 
 connectDB();
-app.use(cors());
+const allowedOrigins = [
+    "https://main-real-estate-frontend.vercel.app",
+    "http://localhost:5173" // or whatever you use locally
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 app.use('/api/properties', propertyRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/payments', paymentRoutes);
 
 const PORT = process.env.PORT || 6005;
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     return res.send("Backend is running");
 })
 /*app.listen(PORT, () => {
