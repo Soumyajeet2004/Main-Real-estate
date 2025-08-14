@@ -1,5 +1,4 @@
 import React from 'react';
-const API_URL = process.env.REACT_APP_API_URL;
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -25,7 +24,7 @@ const Register = () => {
         return;
     }
     try {
-        const response = await axios.post(`${API_URL}/api/auth/register`, form);
+        const response = await axios.post('http://localhost:6005/api/auth/register', form);
         localStorage.setItem('token', response.data.token);
     localStorage.setItem('user', JSON.stringify(response.data.user));
         alert('Registration successful. Please login.');
