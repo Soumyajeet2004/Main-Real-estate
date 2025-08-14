@@ -18,6 +18,7 @@ const corsOptions = {
     origin: function (origin, callback) {
         // Allow requests with no origin (like curl, Postman, server-to-server, or some preflight calls)
         if (!origin || allowedOrigins.includes(origin)) {
+            console.log(`CORS allowed for origin: ${origin || "server-side/no-origin"}`);
             callback(null, true);
         } else {
             console.log(`CORS blocked for origin: ${origin}`);
@@ -29,7 +30,7 @@ const corsOptions = {
     credentials: true
 };
 
-app.use(cors({ origin: true, credentials: true }));
+app.use(cors(corsOptions));
 app.options(/.*/, cors(corsOptions)); // Safe now
 
 app.use(express.json());
