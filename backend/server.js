@@ -10,6 +10,26 @@ dotenv.config();
 
 connectDB();
 
+const allowedOrigins = [
+    "https://main-real-estate-frontend.vercel.app",
+    "http://localhost:5173" // or whatever you use locally
+];
+const corsOptions = {
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like curl, Postman, server-to-server, or some preflight calls)
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true
+};
+
+app.use(cors(corsOptions));
+app.options(/.*/, cors(corsOptions)); // Safe now
 
 app.use(express.json());
 app.use('/api/properties', propertyRoutes);
