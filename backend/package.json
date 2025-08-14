@@ -8,7 +8,8 @@
     "mongodb": "^6.18.0",
     "mongoose": "^8.16.5",
     "nodemon": "^3.1.10",
-    "razorpay": "^2.9.6"
+    "razorpay": "^2.9.6",
+    "vercel": "^45.0.9"
   },
   "name": "real-estate-crud",
   "version": "1.0.0",

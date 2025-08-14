@@ -16,6 +16,9 @@ app.use('/api/auth', authRoutes);
 app.use('/api/payments', paymentRoutes);
 
 const PORT = process.env.PORT || 6005;
+app.get("/",(req,res)=>{
+    return res.send("Backend is running");
+})
 app.listen(PORT, () => {
     console.log(` Server is running on http://localhost:${PORT}`);
 
