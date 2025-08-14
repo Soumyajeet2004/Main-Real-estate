@@ -7,6 +7,7 @@ const authRoutes = require('./routes/authRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
 const app = express();
 dotenv.config();
+
 connectDB();
 app.use(cors());
 app.use(express.json());
