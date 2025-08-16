@@ -72,7 +72,7 @@ const Register = () => {
                   onChange={handlechange}
                   placeholder="Full Name"
                   required
-                  style={{ background: "white", border: "none" }}
+                  style={{ background: "white", border: "none" , color:'black' }}
                 />
               </div>
 

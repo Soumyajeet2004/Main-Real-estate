@@ -61,7 +61,8 @@ const Home = () => {
                 border: 'none',
                 outline: 'none',
                 fontSize: '16px',
-                background: 'transparent'
+                background: 'transparent',
+                color:'black'
               }}
             />
             <button
