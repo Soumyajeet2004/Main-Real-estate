@@ -17,13 +17,11 @@ const allowedOrigins = [
 ];
 const corsOptions = {
     origin: function (origin, callback) {
-        if (!origin) return callback(null, true); // allow server-to-server, curl, Postman
+        if (!origin) return callback(null, true);
 
-        // Allow any vercel.app subdomain
-        if (
-            allowedOrigins.includes(origin) ||
-            /\.vercel\.app$/.test(origin)
-        ) {
+        const allowed = allowedOrigins.some(o => o && origin.startsWith(o)) || /\.vercel\.app$/.test(origin);
+
+        if (allowed) {
             console.log(`✅ CORS allowed for origin: ${origin}`);
             callback(null, true);
         } else {
