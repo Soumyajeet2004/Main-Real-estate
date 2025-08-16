@@ -20,13 +20,7 @@ const corsOptions = {
     origin: function (origin, callback) {
         if (!origin) return callback(null, true);
 
-<<<<<<< HEAD
         if (allowedOrigins.includes(origin) || /\.vercel\.app$/.test(origin)) {
-=======
-        const allowed = allowedOrigins.some(o => o && origin.startsWith(o)) || /\.vercel\.app$/.test(origin);
-
-        if (allowed) {
->>>>>>> 20566151ce9c8f7ba620bf342fdd6cb1954e3bb2
             console.log(`✅ CORS allowed for origin: ${origin}`);
             callback(null, true);
         } else {
