@@ -34,7 +34,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // Safe now
+app.options(/.*/, cors(corsOptions)); // Safe now
 
 app.use(express.json());
 app.use('/api/properties', propertyRoutes);
