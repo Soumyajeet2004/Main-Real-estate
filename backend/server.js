@@ -11,17 +11,21 @@ dotenv.config();
 connectDB();
 
 const allowedOrigins = [
-    "https://main-real-estate-frontend.vercel.app",
+    "http://main-real-estate-frontend-mt9knmgv6.vercel.app",
+    /\.vercel\.app$/,
     "http://localhost:5173" // or whatever you use locally
 ];
 const corsOptions = {
     origin: function (origin, callback) {
-        // Allow requests with no origin (like curl, Postman, server-to-server, or some preflight calls)
-        if (!origin || allowedOrigins.includes(origin)) {
-            console.log(`CORS allowed for origin: ${origin || "server-side/no-origin"}`);
+        if (!origin) return callback(null, true); // allow server-to-server or curl
+        if (
+            allowedOrigins.includes(origin) ||
+            (typeof origin === "string" && /\.vercel\.app$/.test(origin))
+        ) {
+            console.log(`✅ CORS allowed for origin: ${origin}`);
             callback(null, true);
         } else {
-            console.log(`CORS blocked for origin: ${origin}`);
+            console.log(`❌ CORS blocked for origin: ${origin}`);
             callback(new Error("Not allowed by CORS"));
         }
     },
