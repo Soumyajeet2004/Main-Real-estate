@@ -1,19 +1,19 @@
-const express = require('express');
 const dotenv = require('dotenv');
+dotenv.config();
+const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const propertyRoutes = require('./routes/propertyRoutes');
 const authRoutes = require('./routes/authRoutes');
 const paymentRoutes = require('./routes/paymentRoutes');
 const app = express();
-dotenv.config();
+
 
 connectDB();
 
 const allowedOrigins = [
-    "https://main-real-estate-frontend.vercel.app",
-    "https://main-real-estate-frontend-mt9knmgv6.vercel.app",
-    "http://localhost:5173" // or whatever you use locally
+    process.env.FRONTEND_URL,
+    process.env.LOCAL_URL // or whatever you use locally
 ];
 const corsOptions = {
     origin: function (origin, callback) {
@@ -53,7 +53,6 @@ app.get("/", (req, res) => {
 
 });*/
 if (process.env.NODE_ENV !== 'production') {
-    const PORT = process.env.PORT || 6005;
     app.listen(PORT, () => {
         console.log(`Server running on http://localhost:${PORT}`);
     });
