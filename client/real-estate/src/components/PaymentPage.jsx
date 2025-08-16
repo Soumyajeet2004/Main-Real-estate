@@ -9,7 +9,7 @@ const PaymentPage = () => {
     // Function to handle payment
     const handlePayment = async () => {
         try {
-            const { data } = await axios.post('http://localhost:5600/api/payment/create-order', { amount });
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/payment/create-order`, { amount });
             const { orderId, currency } = data;
 
             const options = {
@@ -20,7 +20,7 @@ const PaymentPage = () => {
                 description: "Service Payment",
                 order_id: orderId,
                 handler: async function (response) {
-                    await axios.post('http://localhost:5600/api/payment/save-payment', {   // localhost api URL will be replaced with backend 
+                    await axios.post(`${import.meta.env.VITE_API_URL}/api/payment/save-payment`, {   // localhost api URL will be replaced with backend 
                         orderId,
                         paymentId: response.razorpay_payment_id,
                         amount,

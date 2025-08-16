@@ -10,7 +10,7 @@ const Sell = () => {
   const [selectedproperty, setSelectedproperty] = React.useState(null);
 
   const fetchproperties = async () => {
-    const response = await axios.get('http://localhost:6005/api/properties');
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/properties`);
     setProperties(response.data);
   };
   useEffect(() => {

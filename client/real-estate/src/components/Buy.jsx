@@ -14,7 +14,7 @@ function Buy() {
   const [searchTerm,setSearchTerm] = useState('');
 
   const fetchproperties = async () => {
-    const response = await axios.get('http://localhost:6005/api/properties');
+    const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/properties`);
     setProperties(response.data);
   };
    const searchproperties = async ()=>{
@@ -22,7 +22,7 @@ function Buy() {
       fetchproperties();
     }
     else {
-      const response = await axios.get(`http://localhost:6005/api/properties/search?title=${searchTerm}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/properties/search?title=${searchTerm}`);
       setProperties(response.data);
     }
   }

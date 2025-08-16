@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import './Styles/Viewsell.css';
 const Propertylist = ({properties,fetchproperties,setSeletedproperty}) => {
  const deleteproperty = async(id)=> {
-  await axios.delete(`http://localhost:6005/api/properties/${id}`);
+  await axios.delete(`${import.meta.env.VITE_API_URL}/api/properties/${id}`);
   fetchproperties();
  }
     const navigate = useNavigate();

@@ -39,13 +39,13 @@ const Sellform = ({fetchproperty,selectedproperty,setSelectedproperty}) => {
   console.log("📤 Submitting cleaned form:", cleanedForm);
     try {
     if (selectedproperty) {
-      await axios.put(`http://localhost:6005/api/properties/${selectedproperty._id}`, form);
+      await axios.put(`${import.meta.env.VITE_API_URL}/api/properties/${selectedproperty._id}`, form);
       alert("Property updated successfully!");
       setSelectedproperty(null);
     } else {
 
       console.log("FORM BEFORE SUBMIT:", form);
-      await axios.post('http://localhost:6005/api/properties', form);
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/properties`, form);
       alert("Property added successfully!");
     }
     setForm({ 

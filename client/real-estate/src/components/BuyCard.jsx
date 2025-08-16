@@ -25,7 +25,7 @@ const BuyCard = ({properties , fetchproperties,setSelectedproperties}) => {
   
   const handlePayment = async () => {
         try {
-            const { data } = await axios.post('http://localhost:6005/api/payments/create-order', { amount });
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/payments/create-order`, { amount });
             const { orderId, currency } = data;
 
             const options = {
@@ -36,7 +36,7 @@ const BuyCard = ({properties , fetchproperties,setSelectedproperties}) => {
                 description: "Service Payment",
                 order_id: orderId,
                 handler: async function (response) {
-                    await axios.post('http://localhost:6005/api/payments/save-payment', {   // localhost api URL will be replaced with backend 
+                    await axios.post(`${import.meta.env.VITE_API_URL}/api/payments/save-payment`, {   // localhost api URL will be replaced with backend 
                         orderId,
                         paymentId: response.razorpay_payment_id,
                         amount,
