@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import registerImage from '../assets/0x0.webp';
+import {Link} from 'react-router-dom';
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -107,7 +108,7 @@ const Register = () => {
               </div>
             </form>
             <p className="text-center mt-3">
-              Already have an account? <a href="/login">Login here</a>
+              Already have an account? <Link to="/login">Login Here</Link>
             </p>
           </div>
         </div>
