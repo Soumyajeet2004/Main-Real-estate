@@ -21,7 +21,7 @@ function Footer() {
 
         {/* Portfolio */}
         <a
-          href="https://soumyajeet2004.github.io/port/" // 🔹 replace
+          href="https://main-portfolio-one-gamma.vercel.app" // 🔹 replace
           target="_blank"
           rel="noopener noreferrer"
           className="footer-icon"
